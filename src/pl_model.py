@@ -14,7 +14,6 @@ class LightningModel(pl.LightningModule):
             hidden_size=self.args['hidden_size'],
             dropout_p=self.args['dropout'],
             teacher_forcing_prob=self.args['teacher_forcing_prob'],
-            # padding_idx=self.args['padding_idx'],
         )
         if self.args['load_embedding'] == 'yes':
             self.model.load_embedding()
