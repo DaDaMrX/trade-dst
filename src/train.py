@@ -44,7 +44,7 @@ def parse_args():
     parser.add_argument('--valid_data_path', default='data/clean/valid.json')
     parser.add_argument('--test_data_path', default='data/clean/test.json')
     parser.add_argument('--batch_size', type=int, default=32)
-    parser.add_argument('--padding_idx', type=int, default=1)
+    # parser.add_argument('--padding_idx', type=int, default=1)
 
     # Model
     parser.add_argument('--load_embedding', default='yes', choices=['yes', 'no'])

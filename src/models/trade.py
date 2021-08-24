@@ -10,12 +10,12 @@ from common.embedding import build_embeddings
 
 class Trade(torch.nn.Module):
 
-    def __init__(self, hidden_size, dropout_p, teacher_forcing_prob, padding_idx):
+    def __init__(self, hidden_size, dropout_p, teacher_forcing_prob):
         super().__init__()
         self.hidden_size = hidden_size
         self.dropout_p = dropout_p
         self.teacher_forcing_prob = teacher_forcing_prob
-        self.padding_idx = padding_idx
+        # self.padding_idx = padding_idx
 
         self.vocab = build_vocab()
         self.vocab_size = len(self.vocab)
@@ -26,7 +26,7 @@ class Trade(torch.nn.Module):
         self.embedding = torch.nn.Embedding(
             num_embeddings=self.vocab_size,
             embedding_dim=self.hidden_size,
-            padding_idx=self.padding_idx,
+            # padding_idx=self.padding_idx,
         )
         self.encoder = Encoder(
             embedding=self.embedding,
