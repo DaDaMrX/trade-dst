@@ -201,7 +201,7 @@ class TradeDataModule(pl.LightningDataModule):
         return loader
 
     def test_dataloader(self):
-        if not self.train:
+        if not self.test:
             return None
         pickle_path = os.path.join(self.pickle_dir, 'test.pickle')
         with open(pickle_path, 'rb') as f:
