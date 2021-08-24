@@ -8,7 +8,7 @@ Dataset: MultiWOZ 2.0 [https://github.com/budzianowski/multiwoz](https://github.
 
 ## Dependency
 
-Python 3.9.5
+Python 3.9.6
 
 ```
 pip install torch==1.9.0+cu111 -f https://download.pytorch.org/whl/torch_stable.html
@@ -28,8 +28,23 @@ python src/clean_data.py data/test_dials.json data/clean/test.json
 ## Train
 
 ```
-python src/train.py -t trade
+sh scripts/train.sh
 ```
+
+## Test
+
+```
+sh scripts/test.sh
+```
+
+## Best results
+
+In `results` directory
+
+- Valid Joint ACC: 51.3651
+- Test Joint ACC: 49.7828
+
+![Plot](utils/plot.png)
 
 ## Problems
 

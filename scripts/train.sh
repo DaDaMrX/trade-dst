@@ -1,1 +1,1 @@
-python src/train.py -t debug
+python src/train.py -t trade
