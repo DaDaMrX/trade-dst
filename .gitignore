@@ -1,0 +1,6 @@
+**/*.pyc
+**/*.ipynb
+**/*tmp*.*
+data/
+outputs/
+tmp/

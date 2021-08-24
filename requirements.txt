@@ -1,0 +1,5 @@
+torch==1.9.0+cu111
+pytorch-lightning==1.4.3
+embeddings==0.0.8
+numpy==1.21.2
+pynvml==11.0.0
